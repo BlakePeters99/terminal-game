@@ -71,7 +71,7 @@
 // "You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over."
 // Game over!
 
-
+// * Kayla’s part
 // Event: walk into the woods of darkness
 // Narrator dialogue:
 // "As you walk along, the woods around you become thicker and thicker. The sky darkens... it appears you have entered the Woods of Darkness."
@@ -100,7 +100,7 @@
 // +Adventure Loot
 
 
-
+// * Blake's part
 // event: A wild snorlax 
 // dialog scenario: A wild snorlax appears on your adventure, blocking the entrance path to the mystical shop.
 // choice 1 Poke him with your weapon
@@ -125,7 +125,7 @@
 //      inhales for a massive yawn squishing you between the rock and its massive belly. 
 // result: you died
 
-
+// * Kayla’s and Blake's part
 // event: mystical shop (different outcomes for how much money you have)
 // dialog scenario:
 // choice 1: Take a free handout:
@@ -140,12 +140,41 @@
 // result: you are now the shopkeeper, congrats!!
 
 
-/* CODE STRUCTURE */
-// Name?
-// race?
-//  event #1
-// "dialog"
-// "choices"
-// prompt
-// code
-// event #2
+// Using node module "prompt"
+const prompt = require('prompt-sync')();
+
+// Main call of function to return if player lives or dies
+if (game()) {
+    console.log("You survived!")
+}
+else {
+    console.log("You died.")
+}
+
+// Main function to allow the game to end using return with boolean life status
+function game() {
+    // !comment goes here
+    const username = prompt('What is your name? ');
+    console.log(`Hello ${username}`);
+
+    // Prompts user for class choice that will also be used in future  
+    let playerRole = prompt('Pick a species: Dwarf, Elf, or Human: ');
+    console.log("1: Grab the sword.");
+    console.log("2: Keep on walking.");
+    console.log("3: Pray to the statue for a blessed.");
+
+    decision = chooseFunc();
+
+}
+
+
+// function to handle repeated code of choosing options 1-3 and repeating instruction if user types something else
+function chooseFunc() {
+    let choice = prompt('Make your choice. 1,2, or 3: ');
+
+    while (choice !== "1" && choice !== "2" && choice !== "3") {
+        console.log("That is not an option.");
+        choice = prompt('Make your choice. 1,2, or 3: ');
+    }
+    return choice;
+}
