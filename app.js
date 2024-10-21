@@ -40,7 +40,7 @@
 // Event: encounter random person
 // Narrator dialogue:
 // "As you are meandering down your path, you encounter a traveler."
-// * CHOICE 1 : NO LOOT
+// * CHOICE 1: Ignore. NO LOOT
 // Narrator dialogue:
 // "Ignore them. You are very shy after all… best not to make eye contact."
 // Result if Elf:
@@ -49,7 +49,7 @@
 // The traveller waves at you as you pass. You want to be friendly, so you wave back. But as it turns out, there was another passerby behind you… the traveller was waving to them. You pretend nothing happened. Carry on with your meandering. 
 // Result if Dwarf:
 // You and the traveller give each other an up-nod as you pass. Nice. 
-// * CHOICE 2: LOOT (if Elf or Dwarf)
+// * CHOICE 2: Help. LOOT (if Elf or Dwarf)
 // Narrator dialogue:
 // "Ask the traveler if they need help. It would be nice to have a companion if things go well."
 // Result if Elf:
@@ -61,7 +61,7 @@
 // Result if Human:
 // You call out to the traveller. “Hello friend, I was just passing by and wondered —“ They glare at you and interrupts, “A human eh? I’ll keep my distance, thank you. Move along before I change my mind about killing you on the spot.” Oh my, a speciesist. You best avoid. Hurry along before something bad happens.
 // No Loot
-// * CHOICE 3: LOOT (if Elf or Human)
+// * CHOICE 3: Fight! LOOT (if Elf or Human)
 // Narrator dialogue:
 // "Fight them! You could use some extra loot."
 // Result if Elf or Human:
@@ -71,11 +71,17 @@
 // You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over.
 // Game over!
 
-// Event: 
-// dialog scenario:
-// choice 1 
-// choice 2 
-// choice 3 
+// Event: walk into the woods of darkness
+// Narrator dialogue:
+// "As you walk along, the woods around you become thicker and thicker. The sky darkens... it appears you have entered the Woods of Darkness."
+// * CHOICE 1: Turn around. NO LOOT
+// Narrator dialogue:
+// "Fuck that." You say. You decide to turn around and not risk it.
+// Result if Elf, Dwarf, or Human:
+// You hurry back to the main path.
+// * CHOICE 2: Go to southern part of  woods. LOOT
+// Narrator dialogue: "You decide to head south further into the woods, "
+// * CHOICE 3: 
 
 
 
