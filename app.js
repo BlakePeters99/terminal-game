@@ -8,11 +8,33 @@
 // choice prompt (1 2 3)
 // Add wallet to purchase items
 // Add inventory (armor weapons that kind of thing)
-// event: raid against bandits (pros and cons for choices)
-// dialog scenario:
-// choice 1 
-// choice 2 
-// choice 3 
+
+// * Abdullah's part
+// Event: raid against bandits (pros and cons for choices)
+// Narrator dialogue (start):
+// 'You’ve got a choice, lad, and listen up closely, because I don’t like repeating myself. Do you join these here bandits and increase your chances of loot or would you rather play it safe?'
+// * CHOICE 1 : LOOT
+// Player dialogue, upon choice :
+// ‘Get out my way, choice giver, I’m taking this loot while I can.’
+// Narrator dialogue, if Dwarf :
+// 'Fiery little guy, ain't he?'
+// Result:
+// Your raid with bandits results in loot.
+// * CHOICE 2: LOOT
+// Player Dialogue, upon Choice:
+// ‘I’ve mulled it over and I am carrying enough weight, I don’t need this on my conscience, I am going to move on.’
+// Narrator dialogue, if Elf : 
+// ‘a two-shoe goodie if I’ve ever seen one.’
+// Result:
+// ‘You’re able to acquire  loot as the raiding party drops loot in your path during their escape.’
+// * CHOICE 3: DEATH
+// Player dialogue, upon choice:
+// ‘I am going to wait it out here and see what happens.’
+// Narrator dialogue, if Human :
+// ‘Nothing good can come of waiting’ ya gotta go out and take it!’
+// Result:
+// ‘Caught between advancing forces and escaping raiders, you are killed in the collision.’
+
 // event: help random person (turns out they're a general!)
 // dialog scenario:
 // choice 1 
