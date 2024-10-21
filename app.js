@@ -44,44 +44,60 @@
 // Narrator dialogue:
 // "Ignore them. You are very shy after all… best not to make eye contact."
 // Result if Elf:
-// You glide past the traveller without being seen. Great work!
+// "You glide past the traveller without being seen. Great work!"
 // Result if Human:
-// The traveller waves at you as you pass. You want to be friendly, so you wave back. But as it turns out, there was another passerby behind you… the traveller was waving to them. You pretend nothing happened. Carry on with your meandering. 
+// "The traveller waves at you as you pass. You want to be friendly, so you wave back. But as it turns out, there was another passerby behind you… the traveller was waving to them. You pretend nothing happened. Carry on with your meandering."
 // Result if Dwarf:
-// You and the traveller give each other an up-nod as you pass. Nice. 
+// "You and the traveller give each other an up-nod as you pass. Nice." 
 // * CHOICE 2: Help. LOOT (if Elf or Dwarf)
 // Narrator dialogue:
 // "Ask the traveler if they need help. It would be nice to have a companion if things go well."
 // Result if Elf:
-// “Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. I’m also over encumbered, so if you would, take my extra sword and shield. They’re too much for me to carry.” They give you a sword and shield and you move along to the nearest village together.
+// “"Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. I’m also over encumbered, so if you would, take my extra sword and shield. They’re too much for me to carry.” They give you a sword and shield and you move along to the nearest village together."
 // +20 Adventure Loot
 // Result if Dwarf:
-// “Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. In fact, I’ll pay you! I’m very desperate. Take these 20 coins.” They give you 20 coins and you move along to the nearest village together.
+// “"Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. In fact, I’ll pay you! I’m very desperate. Take these 20 coins.” They give you 20 coins and you move along to the nearest village together."
 // + 20 Adventure Loot
 // Result if Human:
-// You call out to the traveller. “Hello friend, I was just passing by and wondered —“ They glare at you and interrupts, “A human eh? I’ll keep my distance, thank you. Move along before I change my mind about killing you on the spot.” Oh my, a speciesist. You best avoid. Hurry along before something bad happens.
+// "You call out to the traveller. “Hello friend, I was just passing by and wondered —“ They glare at you and interrupts, “A human eh? I’ll keep my distance, thank you. Move along before I change my mind about killing you on the spot.” Oh my, a speciesist. You best avoid. Hurry along before something bad happens."
 // No Loot
 // * CHOICE 3: Fight! LOOT (if Elf or Human)
 // Narrator dialogue:
 // "Fight them! You could use some extra loot."
 // Result if Elf or Human:
-// You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. After some excellent swordsmanship, you defeat them! Great work. You earned some loot.
+// "You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. After some excellent swordsmanship, you defeat them! Great work. You earned some loot."
 // +20 Adventure Loot
 // Result if Dwarf:
-// You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over.
+// "You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over."
 // Game over!
+
 
 // Event: walk into the woods of darkness
 // Narrator dialogue:
 // "As you walk along, the woods around you become thicker and thicker. The sky darkens... it appears you have entered the Woods of Darkness."
 // * CHOICE 1: Turn around. NO LOOT
 // Narrator dialogue:
-// "Fuck that." You say. You decide to turn around and not risk it.
+// ""Fuck that." You say. You decide to turn around and not risk it."
 // Result if Elf, Dwarf, or Human:
-// You hurry back to the main path.
-// * CHOICE 2: Go to southern part of  woods. LOOT
-// Narrator dialogue: "You decide to head south further into the woods, "
-// * CHOICE 3: 
+// "You hurry back to the main path."
+// * CHOICE 2: Go to southern part of woods. LOOT
+// Narrator dialogue:
+// "You decide to head south further into the woods."
+// Result if Elf:
+// "As you walk along, you come across a rusted old chest! You open it to find a glowing pair of boots. They look powerful. Nice loot acquiring!"
+// +20 Adventure Loot
+// Result if Human or Dwarf:
+// "As you walk along, you come across a pile of disturbed soil. You brush away some of the dirt to reveal a pile of poorly hidden gold! Nice."
+// +50 Adventure Loot
+// * CHOICE 3: Go to northern part of woods. LOOT
+// Narrator dialogue:
+// "You decide to head north further into the woods."
+// Result if Human:
+// "As you walk along, you see a tree with what looks like a face... suddenly, the tree springs to life and says, "Lucky traveler! You have run into me, the Tree of Abundance. Take this loot as a little treat."
+// +30 Adventure Loot
+// Result if Elf or Dwarf:
+// "As you walk along, you find a hole in the ground. There's a bunch of gold in it."
+// +50 Adventure Loot
 
 
 
