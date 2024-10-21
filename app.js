@@ -35,7 +35,43 @@
 // Result:
 // ‘Caught between advancing forces and escaping raiders, you are killed in the collision.’
 
-// event: help random person (turns out they're a general!)
+
+// * Kayla’s part
+// Event: encounter random person
+// Narrator dialogue:
+// "As you are meandering down your path, you encounter a traveler."
+// * CHOICE 1 : NO LOOT
+// Narrator dialogue:
+// "Ignore them. You are very shy after all… best not to make eye contact."
+// Result if Elf:
+// You glide past the traveller without being seen. Great work!
+// Result if Human:
+// The traveller waves at you as you pass. You want to be friendly, so you wave back. But as it turns out, there was another passerby behind you… the traveller was waving to them. You pretend nothing happened. Carry on with your meandering. 
+// Result if Dwarf:
+// You and the traveller give each other an up-nod as you pass. Nice. 
+// * CHOICE 2: LOOT (if Elf or Dwarf)
+// Narrator dialogue:
+// "Ask the traveler if they need help. It would be nice to have a companion if things go well."
+// Result if Elf:
+// “Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. I’m also over encumbered, so if you would, take my extra sword and shield. They’re too much for me to carry.” They give you a sword and shield and you move along to the nearest village together.
+// +20 Adventure Loot
+// Result if Dwarf:
+// “Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking for a companion to help me find the nearest village. In fact, I’ll pay you! I’m very desperate. Take these 20 coins.” They give you 20 coins and you move along to the nearest village together.
+// + 20 Adventure Loot
+// Result if Human:
+// You call out to the traveller. “Hello friend, I was just passing by and wondered —“ They glare at you and interrupts, “A human eh? I’ll keep my distance, thank you. Move along before I change my mind about killing you on the spot.” Oh my, a speciesist. You best avoid. Hurry along before something bad happens.
+// No Loot
+// * CHOICE 3: LOOT (if Elf or Human)
+// Narrator dialogue:
+// "Fight them! You could use some extra loot."
+// Result if Elf or Human:
+// You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. After some excellent swordsmanship, you defeat them! Great work. You earned some loot.
+// +20 Adventure Loot
+// Result if Dwarf:
+// You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over.
+// Game over!
+
+// Event: 
 // dialog scenario:
 // choice 1 
 // choice 2 
