@@ -164,7 +164,7 @@ function game() {
     console.log("2: Elf");
     console.log("3: Human");
 
-
+    // Player chooses species
     decision = chooseFunc();
     if (decision === "1"){
         species = "Dwarf"
@@ -180,8 +180,10 @@ function game() {
     console.log("2: Help.");
     console.log("3: Fight!");
     decision = chooseFunc();
+    // Player ignores traveler
     if (decision === "1"){
         console.log("Ignore them. You are very shy after all… best not to make eye contact.");
+        // In first choice if species is dwarf 
         if (species === "Dwarf"){
             console.log("You and the traveler give each other an up-nod as you pass. Nice.");
         } else if (species === "Elf"){
@@ -191,12 +193,14 @@ function game() {
                     "But as it turns out, there was another passerby behind you… the traveller was waving to them.",
                     "You pretend nothing happened. Carry on with your meandering.");
         }
+    // Player helps traveler. If Dwarf or Elf = loot
     } else if (decision === "2"){
         console.log("Ask the traveler if they need help. It would be nice to have a companion if things go well.");
         if (species === "Dwarf"){
             console.log("Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking",
                     "for a companion to help me find the nearest village. In fact, I`ll pay you! I`m very desperate.",
                     "Take these 20 coins.” They give you 20 coins and you move along to the nearest village together.");
+            // Player gains 1 loot
             loot++;
         } else if (species === "Elf"){
             console.log("Hello friend, how are your travels? Need any help?” You say. “Well yes actually I was looking",
@@ -210,6 +214,7 @@ function game() {
                     "mind about killing you on the spot.” Oh my, a speciesist. You best avoid. Hurry along before",
                     "something bad happens.");
         }
+    // Player fights traveler. If Elf or Human = loot, if Dwarf = die
     } else {
         console.log("Fight them! You could use some extra loot.");
         if (species === "Elf" || species === "Human"){
@@ -222,6 +227,7 @@ function game() {
                     "matched! You`re too short! The traveler sees an opening in your armor and slashes at it. It is",
                     "a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see",
                     "a bright light… it`s all over.");
+            // Player dies
             return false
         }
     }
@@ -260,11 +266,13 @@ function game() {
     console.log("2: Go to southern part of woods.");
     console.log("3: Go to northern part of woods.");
     decision = chooseFunc();
+        //Player turns around
     if (decision === "1"){
         console.log("'Fuck that.' You say. You decide to turn around and not risk it.");
         if (species === "Dwarf" || species === "Elf" || species === "Human"){
             console.log("You hurry back to the main path.");
         }
+        //Player goes south. All = loot
     } else if (decision === "2"){
         console.log("You decide to head south further into the woods.");
         if (species === "Dwarf" || species === "Human"){
@@ -276,6 +284,7 @@ function game() {
                     "pair of boots. They look powerful. Nice loot acquiring!");
             loot++;
         }
+        //Player goes north. All = loot
     } else {
         console.log("You decide to head north further into the woods.");
         if (species === "Dwarf" || species === "Elf"){
