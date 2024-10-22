@@ -1,39 +1,8 @@
-// turn based game with chests with loot
 
-// Ask for name & race (elf dwarf human) & dwarf racism
-
+// Ask for name & species (elf dwarf human)
 // Create initial prompt - more creativity
-// Engage in simple conversation ("are you there? are you alive?")
-// "What do you want to do today?" -give them choices and ideas
 // choice prompt (1 2 3)
 // Add wallet to purchase items
-// Add inventory (armor weapons that kind of thing)
-
-// * Abdullah's part
-// Event: raid against bandits (pros and cons for choices)
-// Narrator dialogue (start):
-// 'You’ve got a choice, lad, and listen up closely, because I don’t like repeating myself. Do you join these here bandits and increase your chances of loot or would you rather play it safe?'
-// * CHOICE 1 : LOOT
-// Player dialogue, upon choice :
-// ‘Get out my way, choice giver, I’m taking this loot while I can.’
-// Narrator dialogue, if Dwarf :
-// 'Fiery little guy, ain't he?'
-// Result:
-// Your raid with bandits results in loot.
-// * CHOICE 2: LOOT
-// Player Dialogue, upon Choice:
-// ‘I’ve mulled it over and I am carrying enough weight, I don’t need this on my conscience, I am going to move on.’
-// Narrator dialogue, if Elf : 
-// ‘a two-shoe goodie if I’ve ever seen one.’
-// Result:
-// ‘You’re able to acquire  loot as the raiding party drops loot in your path during their escape.’
-// * CHOICE 3: DEATH
-// Player dialogue, upon choice:
-// ‘I am going to wait it out here and see what happens.’
-// Narrator dialogue, if Human :
-// ‘Nothing good can come of waiting’ ya gotta go out and take it!’
-// Result:
-// ‘Caught between advancing forces and escaping raiders, you are killed in the collision.’
 
 
 // * Kayla’s part
@@ -70,6 +39,37 @@
 // Result if Dwarf:
 // "You leap in front of the traveler and brandish your weapon. “Fight me you bastard!” You yell. They leap back at you with their weapon. It’s a struggle, and the two of you are unevenly matched! You’re too short! The traveler sees an opening in your armor and slashes at it. It is a deep wound. You fall back, dazed! They have bested you! The traveler laughs and walks off. You see a bright light… it’s all over."
 // Game over!
+
+
+
+// * Abdullah's part
+// Event: raid against bandits (pros and cons for choices)
+// Narrator dialogue (start):
+// 'You’ve got a choice, lad, and listen up closely, because I don’t like repeating myself. Do you join these here bandits and increase your chances of loot or would you rather play it safe?'
+// * CHOICE 1 : LOOT
+// Player dialogue, upon choice :
+// ‘Get out my way, choice giver, I’m taking this loot while I can.’
+// Narrator dialogue, if Dwarf :
+// 'Fiery little guy, ain't he?'
+// Result:
+// Your raid with bandits results in loot.
+// * CHOICE 2: LOOT
+// Player Dialogue, upon Choice:
+// ‘I’ve mulled it over and I am carrying enough weight, I don’t need this on my conscience, I am going to move on.’
+// Narrator dialogue, if Elf : 
+// ‘a two-shoe goodie if I’ve ever seen one.’
+// Result:
+// ‘You’re able to acquire  loot as the raiding party drops loot in your path during their escape.’
+// * CHOICE 3: DEATH
+// Player dialogue, upon choice:
+// ‘I am going to wait it out here and see what happens.’
+// Narrator dialogue, if Human :
+// ‘Nothing good can come of waiting’ ya gotta go out and take it!’
+// Result:
+// ‘Caught between advancing forces and escaping raiders, you are killed in the collision.’
+
+
+
 
 // * Kayla’s part
 // Event: walk into the woods of darkness
@@ -153,19 +153,49 @@ else {
 
 // Main function to allow the game to end using return with boolean life status
 function game() {
-    // !comment goes here
+    let species, loot = 0, decision;
+    // Prompts user for name
     const username = prompt('What is your name? ');
     console.log(`Hello ${username}`);
 
     // Prompts user for class choice that will also be used in future  
-    let playerRole = prompt('Pick a species: Dwarf, Elf, or Human: ');
-    console.log("1: Grab the sword.");
-    console.log("2: Keep on walking.");
-    console.log("3: Pray to the statue for a blessed.");
+    console.log('Pick a species: Dwarf, Elf, or Human: ');
+    console.log("1: Dwarf");
+    console.log("2: Elf");
+    console.log("3: Human");
+
 
     decision = chooseFunc();
+    if (decision === "1"){
+        species = "Dwarf"
+    } else if (decision === "2"){
+        species = "Elf"    
+    } else {
+        species = "Human"
+    }
+  
+    // first event
+    console.log("As you are meandering down your path, you encounter a traveler.");
+    console.log("1: Ignore.");
+    console.log("2: Help.");
+    console.log("3: Fight!");
+
+
+    decision = chooseFunc();
+    if (decision === "1"){
+        console.log("Ignore them. You are very shy after all… best not to make eye contact.");
+        if (species === "Dwarf"){
+            console.log("You and the traveler give each other an up-nod as you pass. Nice.);
+        } else if (species === "Elf")
+    
+    } else if (decision === "2"){
+        species = "Elf"    
+    } else {
+        species = "Human"
+    }
 
 }
+
 
 
 // function to handle repeated code of choosing options 1-3 and repeating instruction if user types something else
