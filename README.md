@@ -49,12 +49,12 @@
 
 <br />
 
- ### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> First Sequence
+ ### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> FIRST SEQUENCE
 
 ### Event Summary: You're traveling down a path and you encounter a traveler.
 
-#### You're given choices to either ignore, help or engage in conclict with a traveler. Two of the choices leads to loot one choice leads to death. 
-#### There are variations in interactions depending upon your race selection.
+#### You're given choices to either ignore, help or engage in conclict with a traveler.  
+#### There is fucntionality in the code for different outcomes depending upon the the players choice of race.
 
 <details>
 
@@ -129,20 +129,110 @@
 
 <br />
 
- ### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> Second Sequence
+ ### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> SECOND SEQUENCE
 
 ### Event Summary: You're given an oppurtunity to participate in a raiding party or not.
 
-####  
-#### 
+####  Player is prompted to join a raiding party or to pass on the raid. Two of the choices will lead to loot and one choice will lead to death.
+#### There is functionality in the code for different outcome based on choices made by the player during the interaction.
 
 <details>
 
 <summary>Show/ Hide Code</summary>
+
+    console.log(`Thundering hooves signal approach; a sharp cry warns, "Bandits!"`,
+        `You’ve got a choice, lad, and listen up closely, because I like repeating myself. Do you join these here bandits and increase your chances of loot or would you rather play it safe?;`)
+    console.log("1: Get out my way, choice giver, I’m taking this loot while I can!");
+    console.log("2: I am carrying enough weight, I don’t need this on my conscience, I am going to move on.");
+    console.log("3: ‘I am going to wait it out here and see what happens.’");
+    
+    decision = chooseFunc();
+    //Player joins bandits. If Dwarf = specific dialogue. All = loot      
+    if (decision === "1"){
+        console.log("You're natural, kid! Ever thought of running for office?");
+        if (species === "Dwarf"){
+            console.log("'Fiery little guy, ain't he?'");
+        }
+        loot++;
+
+    //Player avoids bandits. If Elf = specific dialogue. All = loot    
+    } else if (decision === "2"){
+        if (species === "Elf"){
+            console.log(`I am going to wait it out here and see what happens.`);
+        }
+        loot++;
+
+    //Player does nothing. If Human = specific dialogue. All = die.    
+    } else {
+        if (species === "Human"){
+        console.log(`Nothing good can come of waiting’ ya gotta go out and take it!`);
+        }
+        console.log(`Caught between advancing forces and escaping raiders, you are killed in the collision.`)
+        return false
+    }
+
 
 </details>
 
 
 <br />
 
+
+
+### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> THIRD SEQUENCE 
+
+### Event Summary: 
+
+#### 
+#### 
+
+<details>
+
+<summary>Show/ Hide Code</summary>
+
+    console.log("As you walk along, the woods around you become thicker and thicker. The sky darkens... it appears",
+        "you have entered the Woods of Darkness.");
+    console.log("1: Turn around.");
+    console.log("2: Go to southern part of woods.");
+    console.log("3: Go to northern part of woods.");
+    
+    decision = chooseFunc();
+    //Player turns around
+    if (decision === "1"){
+        console.log("'Fuck that.' You say. You decide to turn around and not risk it.");
+        if (species === "Dwarf" || species === "Elf" || species === "Human"){
+            console.log("You hurry back to the main path.");
+        }
+
+    //Player goes south. All = loot
+    } else if (decision === "2"){
+        console.log("You decide to head south further into the woods.");
+        if (species === "Dwarf" || species === "Human"){
+            console.log("As you walk along, you come across a pile of disturbed soil. You brush away some of",
+                    "the dirt to reveal a pile of poorly hidden gold! Nice.");
+            loot++;
+        } else {
+            console.log("As you walk along, you come across a rusted old chest! You open it to find a glowing",
+                    "pair of boots. They look powerful. Nice loot acquiring!");
+            loot++;
+        }
+
+    //Player goes north. All = loot
+    } else {
+        console.log("You decide to head north further into the woods.");
+        if (species === "Dwarf" || species === "Elf"){
+            console.log("As you walk along, you find a hole in the ground. There's a bunch of gold in it.");
+            loot++;
+        } else {
+            console.log("As you walk along, you see a tree with what looks like a face... suddenly, the tree",
+                "springs to life and says, 'Lucky traveler! You have run into me, the Tree of Abundance. Take",
+                "this loot as a little treat.'");
+            loot++;
+            }
+    }
+
+</details>
+
+
+<br />
 
