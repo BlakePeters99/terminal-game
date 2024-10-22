@@ -266,13 +266,13 @@ function game() {
     console.log("2: Go to southern part of woods.");
     console.log("3: Go to northern part of woods.");
     decision = chooseFunc();
-        //Player turns around
+    //Player turns around
     if (decision === "1"){
         console.log("'Fuck that.' You say. You decide to turn around and not risk it.");
         if (species === "Dwarf" || species === "Elf" || species === "Human"){
             console.log("You hurry back to the main path.");
         }
-        //Player goes south. All = loot
+    //Player goes south. All = loot
     } else if (decision === "2"){
         console.log("You decide to head south further into the woods.");
         if (species === "Dwarf" || species === "Human"){
@@ -284,7 +284,7 @@ function game() {
                     "pair of boots. They look powerful. Nice loot acquiring!");
             loot++;
         }
-        //Player goes north. All = loot
+    //Player goes north. All = loot
     } else {
         console.log("You decide to head north further into the woods.");
         if (species === "Dwarf" || species === "Elf"){
@@ -306,6 +306,7 @@ function game() {
 
 
     decision = chooseFunc();
+    // Pokes snorlax. If dwarf = die.
     if (decision === "1"){
         if (species === "Dwarf") {
             console.log(" pokes him with his mighty sword but all the snorlax sees is a tiny dude",
@@ -315,6 +316,7 @@ function game() {
             console.log("You stab the snorlax and it immediately wakes up and moves out of the way, allowing you to proceed.");
         }
     } 
+    // Tells funny joke. All = loot.
     else if (decision === "2") {
         if (species === "Dwarf") {
             console.log("Hey Snorlax! You can always rely on a dwarf, we'll never look down on you.");
@@ -332,6 +334,7 @@ function game() {
         console.log("Snorlax jolts up laughing and hands you a gold rock as tip for that wonderful joke.");
         loot++;
     } 
+    // Squeezes past snorlax. If elf or human = die.
     else {
         if (species === "Dwarf") {
             console.log("As a dwarf, you narrowly slip past the snorlax when they exhale, successfully making it to the shop.");
@@ -350,24 +353,24 @@ function game() {
     console.log("2: Purchase a mystery item. (2 loot price)");
     console.log("3: Hand over all 4 adventure loot items to shop keeper.");
 
-    decision = prompt('Make your choice. 1,2, or 3: ');
-
+    // Original chooseFunc function modified to handle loot
     let finalChoice = false
+
     while (!finalChoice) {
-        while (decision !== "1" && decision !== "2" && decision !== "3") {
-            console.log("That is not an option.");
-            decision = prompt('Make your choice. 1,2, or 3: ');
-        }
+        // Original chooseFun code
+        decision = chooseFunc();
+
+        // If the user doesnt have enough money, run loop until they choose a viable option
         if ((decision === "2" && loot < 2) || (decision === "3" && loot < 4)) {
             console.log(`You do not have enough loot to select this option. You have ${loot} loot item(s).`);
-            decision = prompt('Make your choice. 1,2, or 3: ');
         }
+        // User decides a viable choice
         else {
             finalChoice = true;
         }
     }
 
-    // Final decision
+    // Final decision - User lives but has different endings depending on final choice
     if (decision === "1"){
         console.log("You pick up a binding slave contract. You are now a slave to capitalism and are forced to work for the shop owner for the rest of your life.");
     } 
