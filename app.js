@@ -232,25 +232,27 @@ function game() {
         }
     }
 
-    // Abdullah event
+    // Abdullah's event
     console.log(`Thundering hooves signal approach; a sharp cry warns, "Bandits!"`,
         `You’ve got a choice, lad, and listen up closely, because I like repeating myself. Do you join these here bandits and increase your chances of loot or would you rather play it safe?;`)
     console.log("1: Get out my way, choice giver, I’m taking this loot while I can!");
     console.log("2: I am carrying enough weight, I don’t need this on my conscience, I am going to move on.");
     console.log("3: ‘I am going to wait it out here and see what happens.’");
     decision = chooseFunc();
-
+    //Player joins bandits. If Dwarf = specific dialogue. All = loot      
     if (decision === "1"){
         console.log("You're natural, kid! Ever thought of running for office?");
         if (species === "Dwarf"){
             console.log("'Fiery little guy, ain't he?'");
         }
         loot++;
+    //Player avoids bandits. If Elf = specific dialogue. All = loot    
     } else if (decision === "2"){
         if (species === "Elf"){
             console.log(`I am going to wait it out here and see what happens.`);
         }
         loot++;
+    //Player does nothing. If Human = specific dialogue. All = die.    
     } else {
         if (species === "Human"){
         console.log(`Nothing good can come of waiting’ ya gotta go out and take it!`);
