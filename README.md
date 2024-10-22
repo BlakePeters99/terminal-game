@@ -131,7 +131,7 @@
 
  ### <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px' /> Second Sequence
 
-### Event Summary: You're traveling down a path and you encounter a traveler.
+### Event Summary: You're given an oppurtunity to participate in a raiding party or not.
 
 ####  
 #### 
