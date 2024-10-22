@@ -1,7 +1,10 @@
 # <img src='./public/Terminlly-Medeval.png' width="55em" style='margin-right: 15px'/> Terminlly-Medeval
 
 #### This game was created by Blake Peters, Kayla Bristol and Abdullah Durrani
- 
+
+#### Acknowledgments
+
+This markdown page benifitted from syntax guidance [ChatGPT](https://chat.openai.com) by OpenAI.
  
  
 <br />
